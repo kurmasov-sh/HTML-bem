@@ -1,0 +1,349 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat/static/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Baufra";
+    src: url("fonts/Baufra/Baufra-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Baufra";
+    src: url("fonts/Baufra/Baufra-Bold.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 10%;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 144px;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+}
+
+.logo {
+    width: 202px;
+    height: 68.22px;
+}
+
+.partner-logos {
+    margin-left: 62px;
+    display: flex;
+}
+
+.partner-logos__logo {
+    width: 100%;
+    height: 34px;
+    margin: 0 20px 0 0;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 540px;
+    flex-wrap: wrap;
+}
+
+.header-menu__item {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 22px;
+}
+.header__languages {
+    margin-bottom: 20px;
+}
+
+.header__language-item {
+    font-family: 'Baufra';
+    font-size: 16px;
+    line-height: 19px;
+    margin-right: 12px;
+}
+
+.header__slow-vision {
+    background: url("images/Vector-view_icon.jpg") no-repeat;
+    width: 37.7px;
+    height: 15px;
+    margin-bottom: 20px;
+}
+
+
+.link {
+    text-decoration: none;
+    color: #333333;
+}
+
+
+
+.cover__info{
+    margin-left: 180px;
+}
+
+.button{
+    border-style: solid;
+    height: 69px;
+    border-radius: 4px;
+    color: #C2DA6B;
+    border-width: 1px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.button_apply{
+    border-style: none;
+    background-color: #333333;
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+
+.button_show-more{
+    border-color: #BBBBBB;
+}
+
+.social-media{
+    margin-left: 210px;
+}
+.social-media__logo{
+    margin-right: 36px;
+}
+
+.content{
+    width: 100%;
+}
+
+.cover__title {
+font-family: 'Montserrat';
+font-size: 78px;
+font-weight: 400;
+line-height: 110px;
+width: 620px;
+}
+
+.cover__bottom{
+    margin-top: 170px;
+    display: flex;
+    align-items: center;
+}
+
+.cover__date{
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 5px;
+    margin-top: -30px;  
+}
+.cover__place{
+    font-family: 'Montserrat';
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0px;
+    text-align: end;
+    margin-top: 30px;
+}
+
+.news{
+    text-align: center;
+    margin-top: 150px;
+}
+
+.news__title{
+    font-family: 'Montserrat';
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 70px;
+}
+
+.news-post{
+    display: flex;
+    margin-bottom: 112px;
+}
+
+.news-post__info{
+    margin-left: 48px;
+    align-self: self-end;
+    width: 470px;
+}
+
+.news-post_center{
+    justify-content: center;
+    margin-left: 380px;
+}
+
+.news__date{
+    color: #C2DA6B;
+    margin-bottom: 30px;
+    font-family: 'Baufra';
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.news-post__title{
+    margin-bottom: 38px;
+    font-family: 'Baufra';
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+.news__description{
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #888888;
+}
+
+
+
+.partners{
+    margin-top: 176px;
+}
+
+.partners__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners__arrow-left{
+    margin-right: 66px;
+}
+
+.partners__bottom{
+    margin-top: 76px;
+}
+
+.partners-items{
+    display: flex;
+    justify-content: space-between;
+}
+.partners__title{
+    font-family: 'Montserrat';
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 68px;
+    letter-spacing: 0px;
+}
+
+.partners__progress-bar{
+    width: 219px;
+    height: 9px;
+    background-color: #A2CC5C;
+    margin-top: 93px;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333333;
+    width: 100%;
+    height: 272px;
+}  
+
+.footer-menu{
+    display: flex;
+    justify-content: space-between;
+    width: 414px;
+}
+.footer-menu__column{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.footer__menu-item{
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin-bottom: 41px;
+}
+.footer__column{
+    margin: auto;
+    margin-top: 53px;
+}
+
+.partner-logos__item{
+    margin-right: 27px;
+}
+
+.footer__row{
+    display: flex;
+    align-items: center;
+}
+
+
+.footer-copyright{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #BBBBBB;
+    width: 255px;
+}
+
+.contacts{
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0px;
+    color: #C2DA6B;
+}
+
+.contacts__address{
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    margin-top: 42px;
+    width: 135px;
+}
+
+.contacts__mail{
+    margin-top: 15px;
+}
+.footer__website-development{
+    background-color: #040404;
+    color: #BBBBBB;
+    text-align: center;
+    text-decoration: underline;
+}
