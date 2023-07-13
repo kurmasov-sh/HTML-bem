@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
 
-<body>
+<body class="body">
     <div class="container">
         <header class="header">
-            <a href="#"  class="logo">
-                <img src="images/Frame.jpg" alt="">
-            </a>
-            <div class="partner-logos">
-                <img src="images/Frame-icon1.jpg" alt="" class="partner-logos__logo">
-                <img src="images/image 6-icon2.jpg" alt="" class="partner-logos__logo">
+            <div class="header__column">
+                <a href="#"  class="logo">
+                    <img src="images/Frame.jpg" alt="">
+                </a>
+                <div class="partner-logos">
+                    <img src="images/Frame-icon1.jpg" alt="" class="partner-logos__logo">
+                    <img src="images/image 6-icon2.jpg" alt="" class="partner-logos__logo">
+                </div>
             </div>
+            
     
             <nav class="header-menu">
                 <a href="#" class="link header-menu__item">Прямая трансляция</a>
@@ -28,11 +32,13 @@
                 <a href="#" class="link header-menu__item">Медиа</a>
                 <a href="#" class="link header-menu__item">Контакты</a>
             </nav>
-            <div class="header__languages">
+            <div class="header__column">
+                <div class="header__languages">
                 <a href="#" class="link header__language-item">Ru</a>
                 <a href="#" class="link header__language-item">En</a>
             </div>
             <a href="#" class="header__slow-vision"></a>
+            </div>
         </header>
     
         <content class="content">
@@ -53,49 +59,57 @@
                     </div>
                 </div>
             </div>
-    
+            
             <div class="news">
+                
                 <h2 class="news__title">Новости турнира</h2>
 
-                <div class="news-post news-post_left">
-                    <img class="news__image" src="images/Mask Group-news_img.jpg" alt="#">
-                    <div class="news-post__info">
-                        <div class="news__date"><div class="news__line"></div> <pre>  //  2 дня назад</pre></div>
-
-                        <h2 class="news-post__title">Церемония закрытия FIDE World cup 2019</h2>
-                        <p class="news__description">Церемония закрытия состоялась в отеле Biltmore в Тблиси 27 сентября 2017 года. Игроков и гостей приветсвовал министр спорта по делам полодежи.</p>
-                    </div>
-                </div>
                 
-                <div class="news-post news-post_center">
-                    <img class="news__image" src="images/Mask Group-news_img.jpg" alt="#">
-                    <div class="news-post__info">
-                        <div class="news__date"><div class="news__line"></div> <pre>  //  2 дня назад</pre></div>
 
-                        <h2 class="news-post__title">Церемония закрытия FIDE World cup 2019</h2>
-                        <p class="news__description">Церемония закрытия состоялась в отеле Biltmore в Тблиси 27 сентября 2017 года. Игроков и гостей приветсвовал министр спорта по делам полодежи.</p>
-                    </div>                
-                </div>
+                        <a href="#" class="link news-post news-post_left">
+                            <img class="news__image" src="images/Mask Group-news_img.jpg" alt="#">
+                        <div class="news-post__info">
+                            <div class="news__date"><div class="news__line"></div> <pre>  //  2 дня назад</pre></div>
     
-                <div class="news-post news-post_left">
-                    <img class="news__image" src="images/Mask Group-news_img.jpg" alt="#">
-                    <div class="news-post__info">
-                        <div class="news__date"><div class="news__line"></div> <pre>  //  2 дня назад</pre></div>
-
-                        <h2 class="news-post__title">Церемония закрытия FIDE World cup 2019</h2>
-                        <p class="news__description">Церемония закрытия состоялась в отеле Biltmore в Тблиси 27 сентября 2017 года. Игроков и гостей приветсвовал министр спорта по делам полодежи.</p>
-                    </div>                
-                </div>
+                            <h2 class="news-post__title">Церемония закрытия FIDE World cup 2019</h2>
+                            <p class="news__description">Церемония закрытия состоялась в отеле Biltmore в Тблиси 27 сентября 2017 года. Игроков и гостей приветсвовал министр спорта по делам полодежи.</p>
+                        </div>
+                        </a>
+                        
+                
+                    <a href="#" class="link news-post news-post_center">
+                        <img class="news__image" src="images/Mask Group-news_img.jpg" alt="#">
+                        <div class="news-post__info">
+                            <div class="news__date"><div class="news__line"></div> <pre>  //  2 дня назад</pre></div>
     
-                <div class="news-post news-post_center">
-                    <img class="news__image" src="images/Mask Group-news_img.jpg" alt="#">
-                    <div class="news-post__info">
-                        <div class="news__date"><div class="news__line"></div> <pre>  //  2 дня назад</pre></div>
+                            <h2 class="news-post__title">Церемония закрытия FIDE World cup 2019</h2>
+                            <p class="news__description">Церемония закрытия состоялась в отеле Biltmore в Тблиси 27 сентября 2017 года. Игроков и гостей приветсвовал министр спорта по делам полодежи.</p>
+                        </div>                
+                    </a>
+    
+                    <a href="#" class="link news-post news-post_left">
+                        <img class="news__image" src="images/Mask Group-news_img.jpg" alt="#">
+                        <div class="news-post__info">
+                            <div class="news__date"><div class="news__line"></div> <pre>  //  2 дня назад</pre></div>
+    
+                            <h2 class="news-post__title">Церемония закрытия FIDE World cup 2019</h2>
+                            <p class="news__description">Церемония закрытия состоялась в отеле Biltmore в Тблиси 27 сентября 2017 года. Игроков и гостей приветсвовал министр спорта по делам полодежи.</p>
+                        </div>
+                    </a>
+    
+                    <div href="#" class="news-post news-post_center parallax-container">
+                        <a href="#" class="link news-post news-post_center">
+                            <img class="news__image" src="images/Mask Group-news_img.jpg" alt="#">
+                        <div class="news-post__info">
+                            <div class="news__date"><div class="news__line"></div> <pre>  //  2 дня назад</pre></div>
+    
+                            <h2 class="news-post__title">Церемония закрытия FIDE World cup 2019</h2>
+                            <p class="news__description">Церемония закрытия состоялась в отеле Biltmore в Тблиси 27 сентября 2017 года. Игроков и гостей приветсвовал министр спорта по делам полодежи.</p>
+                        </div>
+                        </a>      
+                        <img src="images/Group 21-parallax-img.png" class="parallax" alt="">
+                    </div>
 
-                        <h2 class="news-post__title">Церемония закрытия FIDE World cup 2019</h2>
-                        <p class="news__description">Церемония закрытия состоялась в отеле Biltmore в Тблиси 27 сентября 2017 года. Игроков и гостей приветсвовал министр спорта по делам полодежи.</p>
-                    </div>                
-                </div>
                 <button class="button button_show-more">Показать еще</button>
             </div>
             
@@ -109,27 +123,41 @@
                 </div>
                 <div class="partners__bottom">
                     <div class="partners-items">
-                        <div class="partners__item">
-                            <img src="images/image 8.1-partner_img1.jpg" alt="#" class="partners__icon">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/imagepartner_img2.jpg" alt="#" class="partners__icon">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/image 2.1partner_img3.jpg" alt="#" class="partners__icon">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/Group 5partner_img4.jpg" alt="#" class="partners__icon">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/image 4.1partner_img5.jpg" alt="#" class="partners__icon">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/image 5.1partner_img6.jpg" alt="#" class="partners__icon">
-                        </div>
-                        <div class="partners__item">
-                            <img src="images/image 6.1-partner_img7.jpg" alt="#" class="partners__icon">
-                        </div>
+                        <a href="#" class="link">
+                            <div class="partners__item">
+                                <img src="images/image 8.1-partner_img1.jpg" alt="#" class="partners__icon">
+                            </div>
+                        </a>
+                        <a href="#" class="link">
+                            <div class="partners__item">
+                                <img src="images/imagepartner_img2.jpg" alt="#" class="partners__icon">
+                            </div>
+                        </a>
+                        <a href="#" class="link">
+                            <div class="partners__item">
+                                <img src="images/image 2.1partner_img3.jpg" alt="#" class="partners__icon">
+                            </div>
+                        </a>
+                        <a href="#" class="link">
+                            <div class="partners__item">
+                                <img src="images/Group 5partner_img4.jpg" alt="#" class="partners__icon">
+                            </div>
+                        </a>
+                        <a href="#" class="link">
+                            <div class="partners__item">
+                                <img src="images/image 4.1partner_img5.jpg" alt="#" class="partners__icon">
+                            </div>
+                        </a>
+                        <a href="#" class="link">
+                            <div class="partners__item">
+                                <img src="images/image 5.1partner_img6.jpg" alt="#" class="partners__icon">
+                            </div>
+                        </a>
+                        <a href="#" class="link">
+                            <div class="partners__item">
+                                <img src="images/image 6.1-partner_img7.jpg" alt="#" class="partners__icon">
+                            </div>
+                        </a>
                     </div>
                     <div class="partners__progress-bar"></div>
                 </div>
@@ -170,15 +198,24 @@
         
         <div class="footer__column">
             <div class="contacts">
-                <p class="contacts__phone">+7 (3467) 555-321</p>
-                <p class="contacts__mail">mail@mail.ru</p>
+                <a href="#" class="link">
+                    <p class="contacts__phone">+7 (3467) 555-321</p>
+                </a>
+                <a href="#" class="link">
+                    <p class="contacts__mail">mail@mail.ru</p>
+                </a>
                 <p class="contacts__address">Ханты-Мансийск Лопарева,6</p>
             </div>
         </div>
         
         
     </footer>
-    <div class="footer__website-development">Разработка — Югорские Интернет Решения</div>
+    <a href="#" class="link">
+        <div class="footer__website-development">Разработка — Югорские Интернет Решения</div>
+    </a>
+
+
+    
 </body>
     
 </html>

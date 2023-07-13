@@ -39,19 +39,15 @@
     background: #ffffff;
 }
 
-.logo {
-    width: 202px;
-    height: 68.22px;
-}
+
 
 .partner-logos {
-    margin-left: 62px;
     display: flex;
+    margin-left: 60px;
 }
 
 .partner-logos__logo {
     width: 100%;
-    height: 34px;
     margin: 0 20px 0 0;
 }
 
@@ -60,18 +56,26 @@
     justify-content: space-between;
     width: 540px;
     flex-wrap: wrap;
+    height: 100px;
+    align-content: space-around;
 }
 
+.header__column{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .header-menu__item {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 18px;
-    margin-bottom: 22px;
 }
+
+
 .header__languages {
-    margin-bottom: 20px;
+    margin-right: 40px;
 }
 
 .header__language-item {
@@ -84,10 +88,10 @@
 
 
 .header__slow-vision {
+    transition: 0.35s;
     background: url("images/Vector-view_icon.jpg") no-repeat;
     width: 37.7px;
     height: 15px;
-    margin-bottom: 20px;
 }
 
 .header__slow-vision:hover{
@@ -95,6 +99,7 @@
 }
 
 .link {
+    transition: 0.35s;
     text-decoration: none;
     color: #333333;
 }
@@ -105,10 +110,10 @@
 
 
 .cover__info{
-    margin-left: 145px;
+    margin-left: 130px;
 }
 
-.button{
+.button{    
     border-style: solid;
     height: 69px;
     border-radius: 4px;
@@ -126,6 +131,9 @@
 }
 
 .button_show-more{
+    background-color: #FFFFFF;
+    margin: auto;
+    transition: 0.35s;
     border-color: #BBBBBB;
 }
 .button_show-more:hover{
@@ -138,7 +146,8 @@
     display: flex;
 }
 .social-media__twitter-logo{
-    background-image: url(images/twitter-social_media_logo1.png);
+    transition: 0.35s;
+    background-image: url(images/twitter.png);
     margin-right: 36px;
     width: 30px;
     height: 25px;
@@ -149,7 +158,8 @@
 }
 
 .social-media__facebook-logo{
-    background-image: url(images/fc\ icon-fc_logo.png);
+    transition: 0.35s;
+    background-image: url(images/fc\ icon.png);
     margin-right: 36px;
     width: 12px;
     height: 23px;
@@ -160,7 +170,8 @@
 }
 
 .social-media__insta-logo{
-    background-image: url(images/Group-insta_logo.png);
+    transition: 0.35s;
+    background-image: url(images/insta\ icon.png);
     margin-right: 36px;
     width: 25px;
     height: 25px;
@@ -189,8 +200,8 @@
     background-color: #A2CC5C;
 }
 
-body{
-    background: url(images/Group\ 24-body_bg.png) no-repeat;
+.body{
+    background: url(images/Group\ 22-body_bg\ \(2\).png) no-repeat;
     background-position: 50% 0px;
 }
 
@@ -229,9 +240,11 @@ body{
 }
 
 .news{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     margin-top: 150px;
 }
+
 
 .news__title{
     font-family: 'Montserrat';
@@ -246,6 +259,7 @@ body{
 .news-post{
     display: flex;
     margin-bottom: 112px;
+    width: 925px;
 }
 
 .news-post__info{
@@ -255,8 +269,8 @@ body{
 }
 
 .news-post_center{
-    justify-content: center;
-    margin-left: 380px;
+    margin: 0 0 0 auto;
+    margin-bottom: 112px;
 }
 
 .news__date{
@@ -308,6 +322,7 @@ body{
 }
 
 .partners__arrow-left{
+    transition: 0.35s;
     margin-right: 66px;
     background: url(images/Vector-arrow_left.jpg) no-repeat;
     width: 16px;
@@ -319,6 +334,7 @@ body{
 }
 
 .partners__arrow-right{
+    transition: 0.35s;
     margin-right: 66px;
     background: url(images/Vector-arrow_right.png) no-repeat;
     width: 16px;
@@ -426,12 +442,44 @@ body{
     width: 135px;
 }
 
+.test{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: #333333;
+}
+
 .contacts__mail{
+    color: #C2DA6B;
+    transition: none;
     margin-top: 15px;
 }
+
+.contacts__phone{
+    color: #C2DA6B;
+    transition: none;
+}
 .footer__website-development{
+    color: #BBBBBB;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+
     background-color: #040404;
     color: #BBBBBB;
     text-align: center;
     text-decoration: underline;
 }
+
+.parallax-container{
+    position: relative;
+}
+.parallax{
+    top: 20%;
+    right: 130%;
+    position: absolute;
+}
+
