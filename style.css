@@ -18,7 +18,30 @@
     src: url("fonts/Baufra/Baufra-Bold.ttf");
 }
 
-*{
+@media (max-width: 1200px){
+
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (max-width: 768px){
+
+}
+
+@media (max-width: 576px){
+
+}
+
+@media (max-width: 375px){
+
+}
+
+
+
+
+.body{
     margin: 0;
     padding: 0;
 }
@@ -60,6 +83,7 @@
     align-content: space-around;
 }
 
+
 .header__column{
     display: flex;
     align-items: center;
@@ -74,6 +98,29 @@
 }
 
 
+
+
+.header-menu__item:hover .header-menu__sub-menu{
+    display: flex;
+}
+
+.header-menu__sub-menu{
+    width: 200px;
+    height: 194px;
+    background-color: #ffffff;
+    text-align: left;
+    flex-direction: column;
+    position: absolute;
+    display: none;
+}
+
+.header-menu__sub-menu-item{
+    margin-top: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
 .header__languages {
     margin-right: 40px;
 }
@@ -84,7 +131,6 @@
     line-height: 19px;
     margin-right: 12px;
 }
-
 
 
 .header__slow-vision {
@@ -309,6 +355,7 @@
 
 .partners{
     margin-top: 176px;
+    overflow: hidden;
 }
 
 .partners__top{
@@ -333,6 +380,10 @@
     background-image: url(images/Vector-arrow_left_hover.png);
 }
 
+.partners__arrow-left_active{
+    background-image: url(images/Vector-arrow_left_active.png);
+}
+
 .partners__arrow-right{
     transition: 0.35s;
     margin-right: 66px;
@@ -345,6 +396,9 @@
     background-image: url(images/Vector-arrow_right_hover.png);
 }
 
+.partners__arrow-right_active{
+    background-image: url(images/Vector-arrow_right_active.png);
+}
 .partners__bottom{
     margin-top: 76px;
 }
@@ -478,8 +532,7 @@
     position: relative;
 }
 .parallax{
+    position: absolute;
     top: 20%;
     right: 130%;
-    position: absolute;
 }
-

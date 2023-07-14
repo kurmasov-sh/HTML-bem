@@ -15,14 +15,13 @@ window.onload = function (){
         positionY = positionY + (distY * speed);
 
         parallax.style.cssText = `transform: translate(${positionX / forImg}%, ${positionY / forImg}%);`; 
-        console.log("123")
         requestAnimationFrame(SetStyle);
 
 
     }
     SetStyle();
     
-    parallax.addEventListener("mousemove", function (e) {
+    parallax.addEventListener('mousemove', function (e) {
         const parallaxWidth = parallax.offsetWidth;
         const parallaxHeight = parallax.offsetHeight;
 
@@ -34,6 +33,63 @@ window.onload = function (){
         
 
     });
+
+    //СЛАЙДЕР
+
+    const partnersItems = document.querySelector('.partners-items');
+    const progressBar = document.querySelector('.partners__progress-bar');
+    const arrowLeft = document.querySelector('.partners__arrow-left');
+    const arrowRight = document.querySelector('.partners__arrow-right');
+
+    const slideWidth = 100; // Width of each slide item
+    const slideMargin = 110; // Margin between slide items
+    const totalSlides = partnersItems.children.length;
+    
+    let currentIndex = 0;
+    arrowRight.setAttribute('class', 'partners__arrow-right partners__arrow-right_active')
+
+    function checkIndex(){
+        if(currentIndex === 0)
+        {   
+            arrowRight.setAttribute('class', 'partners__arrow-right partners__arrow-right_active')
+            arrowLeft.setAttribute('class', 'partners__arrow-left')
+        }
+        else if(currentIndex === totalSlides)
+        {   
+            arrowRight.setAttribute('class', 'partners__arrow-right')
+            arrowLeft.setAttribute('class', 'partners__arrow-left partners__arrow-left_active')
+        }
+        else
+        {
+            arrowLeft.setAttribute('class', 'partners__arrow-left partners__arrow-left_active')
+            arrowRight.setAttribute('class', 'partners__arrow-right partners__arrow-right_active')
+        }
+    }
+    // Update progress bar width based on the current slide
+
+    // Slide to the next item
+    function slideNext() {
+    if (currentIndex < totalSlides) {
+        currentIndex++;
+        const translateX = -((slideWidth + slideMargin) * currentIndex);
+        partnersItems.style.transform = `translateX(${translateX}px)`;
+        checkIndex();
+    }
+    }
+
+    // Slide to the previous item
+    function slidePrev() {
+    if (currentIndex > 0) {
+        currentIndex--;
+        const translateX = -((slideWidth + slideMargin) * currentIndex);
+        partnersItems.style.transform = `translateX(${translateX}px)`;
+        checkIndex();
+    }
+    }
+
+    // Add event listeners to the arrow controls
+    arrowLeft.addEventListener('click', slidePrev);
+    arrowRight.addEventListener('click', slideNext);
 
 }
 
