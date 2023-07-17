@@ -41,8 +41,8 @@ window.onload = function (){
     const arrowLeft = document.querySelector('.partners__arrow-left');
     const arrowRight = document.querySelector('.partners__arrow-right');
 
-    const slideWidth = 100; // Width of each slide item
-    const slideMargin = 110; // Margin between slide items
+    const slideWidth = 250; // Width of each slide item
+    const slideMargin = 0; // Margin between slide items
     const totalSlides = partnersItems.children.length;
     
     let currentIndex = 0;
