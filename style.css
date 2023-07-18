@@ -26,6 +26,8 @@
 .body{
     margin: 0;
     padding: 0;
+    color: #333333;
+
 }
 
 .container {
@@ -121,6 +123,7 @@
     background: url("images/Vector-view_icon.jpg") no-repeat;
     width: 37.7px;
     height: 15px;
+    margin-left: 20px;
 }
 
 .header__slow-vision:hover{
@@ -138,7 +141,7 @@
 
 
 
-.cover__info{
+.cover{
 }
 
 .button{    
@@ -238,7 +241,7 @@
     font-family: 'Montserrat';
     font-size: 78px;
     line-height: 110px;
-    width: 620px;
+    width: 670px;
     margin-top: 105px;
 }
 
@@ -562,6 +565,7 @@
     margin: 0 5% 0 5%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .header__burger-bottom{
     justify-content: space-between;
@@ -575,7 +579,7 @@
 @media (max-width: 1200px){
     .container{
         max-width: 1100px;
-        margin: 0  auto;
+        margin: 0 20px 0 20px;
     }
 
     .cover__bottom{
@@ -605,12 +609,25 @@
     }
     .partners-items{
     }
-
+    .header-menu__item {
+        font-size: 14px;
+    }
+    .footer__menu-item{
+        font-size: 14px;
+    }
+    .cover__title{
+        width: 100%;
+        font-size: 57px;
+        max-width: 500px;
+    }
 }
 
 @media (max-width: 992px){
     .container{
         max-width: 830px;
+    }
+    .parallax{
+        display: none;
     }
     .body{
         background-position: 40% 0;
@@ -621,11 +638,10 @@
     .header__burger{
         display: block;
     }
-
-    .header__burger:hover .header__burger-wrapper{
-        display: flex;
-        height: 550px;
+    .header__slow-vision_adaptive{
+        margin: 0;
     }
+    
     .header__languages{
         margin-right: 0;
         display: flex;
@@ -669,8 +685,7 @@
         display: flex;
         justify-content: space-around;
     }
-    .news-post_center{
-    }
+
 
     
 
@@ -697,13 +712,156 @@
     .social-media__facebook-logo{
         background-image: url(images/fc\ icon-fc_logo.png);
     }
-
+    
+    .news__image{
+        width: 100%;
+        height: 100%;
+    }
+    .news__description{
+        margin: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .news-post{
+        margin-bottom: 50px;
+    }
+    .partners{
+        margin-top: 150px;
+    }
+    .news__title{
+        font-size: 50px;
+    }
 }
 
 @media (max-width: 576px){
-
+    .container{
+        max-width: 500px;
+    }
+    .header__languages{
+        display: none;
+    } 
+    
+    .header__slow-vision{
+        display: none;
+    }
+    .news-post{
+        display: block;
+    }
+    .news-post__info{
+        margin: 0;
+    }
+    .news__line{
+        display: none;
+    }
+    .partners__top{
+        display: block;
+        text-align: center;
+    }
+    .partners__controls{
+        display: none;
+    }
+    .news__title{
+        text-align: center;
+    }
+    .cover{
+        display: flex;
+        flex-direction: column;
+    }
+    .cover__title{
+        text-align: center;
+    }
+    .cover__bottom{
+        align-items: center;
+    }
+    .button_apply{
+        align-self: center;
+    }
+    .cover__date{
+        font-size: 20px;
+    }
+    .cover__place{
+        text-align: center;
+    }
+    .cover__line{
+        width: 29px;
+    }
+    .cover__info{
+        align-self: center;
+    }
+    .social-media{
+        margin-top: 120px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer_mobile-version{
+        display: none;
+    }
+    .footer__column{
+        margin: 50px 5% 0 5%;
+    }
+    .footer-copyright{
+        width: unset;
+        text-align: center;
+    }
+    .footer__row{
+        justify-content: space-around;
+    }
+    .footer-menu{
+        width: unset;
+        display: block;
+    }
+    .footer-menu__column{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .contacts{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacts__address{
+        width: 140px;
+    }
+    
 }
 
 @media (max-width: 375px){
+    .container{
+        max-width: 330px;
+    }
+    
 
+    .cover__line{
+        width: 19px;
+    }
+    .cover__title{
+        width: 100%;
+        font-size: 40px;
+        max-width: 350px   
+    }
+    .cover__date{
+        letter-spacing: 3px;
+        font-size: 16px;
+    }
+    .cover__place{
+        font-size: 24px;
+    }
+    .partner-logos{
+        display: none;
+    }
+    
+    .partners__title{
+        font-size: 36px;
+    }
+    .cover{
+        align-items: center;
+    }
+    .header__burger-wrapper{
+        width: 300px;
+    }
 }
