@@ -95,29 +95,26 @@ window.onload = function (){
     
 
     //МОБИЛЬНОЕ МЕНЮ
-    function openBurger(){
+    function toggleBurger(){
         if(window.getComputedStyle(header__burgerWrapper).display === 'none')
         {
             header__burgerWrapper.style.display = 'flex';
-            console.log("4")
-        }       
-    }
-    function closeBurger(){
-        if(window.getComputedStyle(header__burgerWrapper).display === 'flex')
-        {
+        }
+        else
+        {   
             header__burgerWrapper.style.display = 'none';
-            console.log("213")
         }       
     }
+    
     const header = document.querySelector('header');
     const burgerMenu = document.createElement('div');
     burgerMenu.setAttribute('class', 'header__burger');
     header.appendChild(burgerMenu);
-    burgerMenu.addEventListener('click', openBurger);
+    burgerMenu.addEventListener('click', toggleBurger)
     
     const header__burgerWrapper = document.createElement('div');
     header__burgerWrapper.setAttribute('class', 'header__burger-wrapper');
-    burgerMenu.appendChild(header__burgerWrapper);
+    header.appendChild(header__burgerWrapper);
 
     const header__burgerTop = document.createElement('div');
     header__burgerTop.setAttribute('class', 'header__burger-top');
@@ -132,7 +129,7 @@ window.onload = function (){
     header__burgerTopBtn.setAttribute('class', 'header__burger-top-btn');
     header__burgerTopBtn.setAttribute('src', 'images/Group 2.7-burger_close_btn.png');
     header__burgerTop.appendChild(header__burgerTopBtn);
-    header__burgerTopBtn.addEventListener('click', closeBurger);
+    header__burgerTopBtn.addEventListener('click', toggleBurger)
 
 
     const burgerLogo = document.createElement('img');
@@ -144,57 +141,42 @@ window.onload = function (){
     header__burgerMenu.setAttribute('class', 'header__burger-menu');
     header__burgerWrapper.appendChild(header__burgerMenu);
 
-    const headerMenu__item1 = document.createElement('a');
-    headerMenu__item1.setAttribute('class', 'link header-menu__item');
-    headerMenu__item1.setAttribute('href', '#');
-    headerMenu__item1.textContent = 'Прямая трансляция';
-    header__burgerMenu.appendChild(headerMenu__item1);
 
-    const headerMenu__item2 = document.createElement('a');
-    headerMenu__item2.setAttribute('class', 'link header-menu__item');
-    headerMenu__item2.setAttribute('href', '#');
-    headerMenu__item2.textContent = 'Ханты-Мансийск';
-    header__burgerMenu.appendChild(headerMenu__item2);
+    //цикл для добавления элементов меню burger
+    let menuArray = ['Прямая трансляция','Ханты-Мансийск','Новости','Участники','Основная информация','Результаты','Медиа','Контакты']
+    let subMenuArray = ['О Ханты-Мансийске','История кубка мира','Информация для участников' ]
 
-    const headerMenu__item3 = document.createElement('a');
-    headerMenu__item3.setAttribute('class', 'link header-menu__item');
-    headerMenu__item3.setAttribute('href', '#');
-    headerMenu__item3.textContent = 'Новости';
-    header__burgerMenu.appendChild(headerMenu__item3);
 
-    const headerMenu__item4 = document.createElement('a');
-    headerMenu__item4.setAttribute('class', 'link header-menu__item');
-    headerMenu__item4.setAttribute('href', '#');
-    headerMenu__item4.textContent = 'Участники';
-    header__burgerMenu.appendChild(headerMenu__item4);
-    
-    const headerMenu__item5 = document.createElement('span');
-    headerMenu__item5.setAttribute('class', 'link header-menu__item header__burger-sub-menu');
-    header__burgerMenu.appendChild(headerMenu__item5);
+    for(let i = 0; i < 8; i++){
+        if(i === 4)
+        {   const headerMenu__item = document.createElement('a');
+            headerMenu__item.setAttribute('class', 'link header-menu__item');
+            headerMenu__item.setAttribute('href', '#');
+            headerMenu__item.textContent = menuArray[i];
+            const headerMenu__itemSpan = document.createElement('span');
+            headerMenu__itemSpan.setAttribute('class', 'link header-menu__item header__burger-sub-menu');
+            headerMenu__itemSpan.appendChild(headerMenu__item);
+            header__burgerMenu.appendChild(headerMenu__itemSpan);
 
-    const headerMenu__item6 = document.createElement('a');
-    headerMenu__item6.setAttribute('class', 'link');
-    headerMenu__item6.setAttribute('href', '#');
-    headerMenu__item6.textContent = 'Основная информация';
-    headerMenu__item5.appendChild(headerMenu__item6);
-
-    const headerMenu__item7 = document.createElement('a');
-    headerMenu__item7.setAttribute('class', 'link header-menu__item');
-    headerMenu__item7.setAttribute('href', '#');
-    headerMenu__item7.textContent = 'Результаты';
-    header__burgerMenu.appendChild(headerMenu__item7);
-
-    const headerMenu__item8 = document.createElement('a');
-    headerMenu__item8.setAttribute('class', 'link header-menu__item');
-    headerMenu__item8.setAttribute('href', '#');
-    headerMenu__item8.textContent = 'Медиа';
-    header__burgerMenu.appendChild(headerMenu__item8);
-
-    const headerMenu__item9 = document.createElement('a');
-    headerMenu__item9.setAttribute('class', 'link header-menu__item');
-    headerMenu__item9.setAttribute('href', '#');
-    headerMenu__item9.textContent = 'Контакты';
-    header__burgerMenu.appendChild(headerMenu__item9);
+            const headerMenu__subMenu = document.createElement('div');
+            headerMenu__subMenu.setAttribute('class', 'header-menu__sub-menu')
+            headerMenu__item.appendChild(headerMenu__subMenu);
+            for(let i = 0; i < 3; i++)
+            {
+                const headerSubMenu__item = document.createElement('a');
+                headerSubMenu__item.setAttribute('class', 'link header-menu__sub-menu-item');
+                headerSubMenu__item.setAttribute('href', '#');
+                headerSubMenu__item.textContent = subMenuArray[i];
+                headerMenu__subMenu.appendChild(headerSubMenu__item);
+            }
+            continue;
+        }
+        const headerMenu__item = document.createElement('a');
+        headerMenu__item.setAttribute('class', 'link header-menu__item');
+        headerMenu__item.setAttribute('href', '#');
+        headerMenu__item.textContent = menuArray[i];
+        header__burgerMenu.appendChild(headerMenu__item);
+    }
 
     const header__burgerBottom = document.createElement('div');
     header__burgerBottom.setAttribute('class', 'header__burger-bottom');
