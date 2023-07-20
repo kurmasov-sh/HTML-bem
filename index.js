@@ -92,17 +92,66 @@ window.onload = function (){
     // Add event listeners to the arrow controls
     arrowLeft.addEventListener('click', slidePrev);
     arrowRight.addEventListener('click', slideNext);
+    let currentPosition = 0
+    function moveSlides(position) {
+        currentPosition = position;
+        partnersItems.style.transform = `translateX(${-currentPosition}px)`;
+    }
+
+    let isDragging = false;
+    let startDragX = 0;
+    let startTranslateX = 0;
+
+    partnersItems.addEventListener('mousedown', function (event) {
+        isDragging = true;
+        startDragX = event.clientX;
+        startTranslateX = currentPosition;
+        partnersItems.style.cursor = 'grabbing';
+    });
+
+    document.addEventListener('mousemove', function (event) {
+        if (!isDragging) return;
+        const dragOffsetX =  startDragX - event.clientX;
+        const newPosition = startTranslateX + dragOffsetX;
+        moveSlides(newPosition);
+    });
+
+    document.addEventListener('mouseup', function () {
+        isDragging = false;
+        partnersItems.style.cursor = 'grab';
+
+    });
+
+    partnersItems.addEventListener('touchstart', function (event) {
+        isDragging = true;
+        startDragX = event.touches[0].clientX;
+        startTranslateX = currentPosition;
+        partnersItems.style.cursor = 'grabbing';
+    });
+
+    document.addEventListener('touchmove', function (event) {
+        if (!isDragging) return;
+        const dragOffsetX =  startDragX - event.touches[0].clientX;
+        const newPosition = startTranslateX + dragOffsetX;
+        moveSlides(newPosition);
+    });
+
+    document.addEventListener('', function () {
+        isDragging = false;
+        partnersItems.style.cursor = 'grab';
+
+    });
     
 
     //МОБИЛЬНОЕ МЕНЮ
     function toggleBurger(){
-        if(window.getComputedStyle(header__burgerWrapper).display === 'none')
+        if(header__burgerWrapper.classList.contains('open'))
         {
-            header__burgerWrapper.style.display = 'flex';
+            header__burgerWrapper.classList.remove('open');
         }
         else
         {   
-            header__burgerWrapper.style.display = 'none';
+            header__burgerWrapper.classList.add('open');
         }       
     }
     
@@ -130,6 +179,7 @@ window.onload = function (){
     header__burgerTopBtn.setAttribute('src', 'images/Group 2.7-burger_close_btn.png');
     header__burgerTop.appendChild(header__burgerTopBtn);
     header__burgerTopBtn.addEventListener('click', toggleBurger)
+
 
 
     const burgerLogo = document.createElement('img');
@@ -209,6 +259,9 @@ window.onload = function (){
     contacts__address.setAttribute('class', 'contacts__address contacts__address_burger');
     contacts__address.textContent = 'г. Ханты-Мансийск ул. Лопарева,6'
     header__burgerBottom.appendChild(contacts__address);
+
+    
+    
 
 }
 
