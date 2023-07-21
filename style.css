@@ -42,6 +42,7 @@
     flex-direction: column;
     max-width: 1620px;
     margin: 0  auto;
+    padding: 0 20px 0 20px;
 }
 
 .header {
@@ -149,9 +150,6 @@
 
 
 
-.cover{
-
-}
 
 .button{    
     border-style: solid;
@@ -570,14 +568,6 @@
     transform: translateX(-100%);
 }
 
-/* @keyframes burger-animation{
-    from {
-        margin-right: -376px;
-    }
-    to {
-        margin-right: 0;
-    }
-} */
 .header__burger-menu{
     height: 300px;
     margin-top: 30px;
@@ -653,9 +643,6 @@
     .partner-logos{
         margin-left: 20px;
     }
-    /* .header__burger-wrapper{
-        display: none;
-    } */
     
 }
 
@@ -707,8 +694,7 @@
         height: unset;
     }
 
-    .header__burger-bottom{
-    }
+
     .header-menu__sub-menu-item {
         margin-top: 20px;
         background-color: #F0F0F0;

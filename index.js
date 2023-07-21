@@ -39,7 +39,6 @@ window.onload = function (){
     //СЛАЙДЕР
 
     const partnersItems = document.querySelector('.partners-items');
-    const progressBar = document.querySelector('.partners__progress-bar');
     const arrowLeft = document.querySelector('.partners__arrow-left');
     const arrowRight = document.querySelector('.partners__arrow-right');
 
@@ -145,13 +144,13 @@ window.onload = function (){
 
     //МОБИЛЬНОЕ МЕНЮ
     function toggleBurger(){
-        if(header__burgerWrapper.classList.contains('open'))
+        if(headerBurgerWrapper.classList.contains('open'))
         {
-            header__burgerWrapper.classList.remove('open');
+            headerBurgerWrapper.classList.remove('open');
         }
         else
         {   
-            header__burgerWrapper.classList.add('open');
+            headerBurgerWrapper.classList.add('open');
         }       
     }
     
@@ -161,24 +160,24 @@ window.onload = function (){
     header.appendChild(burgerMenu);
     burgerMenu.addEventListener('click', toggleBurger)
     
-    const header__burgerWrapper = document.createElement('div');
-    header__burgerWrapper.setAttribute('class', 'header__burger-wrapper');
-    header.appendChild(header__burgerWrapper);
+    const headerBurgerWrapper = document.createElement('div');
+    headerBurgerWrapper.setAttribute('class', 'header__burger-wrapper');
+    header.appendChild(headerBurgerWrapper);
 
-    const header__burgerTop = document.createElement('div');
-    header__burgerTop.setAttribute('class', 'header__burger-top');
-    header__burgerWrapper.appendChild(header__burgerTop);
+    const headerBurgerTop = document.createElement('div');
+    headerBurgerTop.setAttribute('class', 'header__burger-top');
+    headerBurgerWrapper.appendChild(headerBurgerTop);
 
     const logo = document.createElement('a');
     logo.setAttribute('class', 'logo');
     logo.setAttribute('href', '#');
-    header__burgerTop.appendChild(logo);
+    headerBurgerTop.appendChild(logo);
 
-    const header__burgerTopBtn = document.createElement('img');
-    header__burgerTopBtn.setAttribute('class', 'header__burger-top-btn');
-    header__burgerTopBtn.setAttribute('src', 'images/Group 2.7-burger_close_btn.png');
-    header__burgerTop.appendChild(header__burgerTopBtn);
-    header__burgerTopBtn.addEventListener('click', toggleBurger)
+    const headerBurgerTopBtn = document.createElement('img');
+    headerBurgerTopBtn.setAttribute('class', 'header__burger-top-btn');
+    headerBurgerTopBtn.setAttribute('src', 'images/Group 2.7-burger_close_btn.png');
+    headerBurgerTop.appendChild(headerBurgerTopBtn);
+    headerBurgerTopBtn.addEventListener('click', toggleBurger)
 
 
 
@@ -187,9 +186,9 @@ window.onload = function (){
     burgerLogo.setAttribute('src', 'images/Frame.jpg');
     logo.appendChild(burgerLogo)
 
-    const header__burgerMenu = document.createElement('div');
-    header__burgerMenu.setAttribute('class', 'header__burger-menu');
-    header__burgerWrapper.appendChild(header__burgerMenu);
+    const headerBurgerMenu = document.createElement('div');
+    headerBurgerMenu.setAttribute('class', 'header__burger-menu');
+    headerBurgerWrapper.appendChild(headerBurgerMenu);
 
 
     //цикл для добавления элементов меню burger
@@ -199,66 +198,66 @@ window.onload = function (){
 
     for(let i = 0; i < 8; i++){
         if(i === 4)
-        {   const headerMenu__item = document.createElement('a');
-            headerMenu__item.setAttribute('class', 'link header-menu__item');
-            headerMenu__item.setAttribute('href', '#');
-            headerMenu__item.textContent = menuArray[i];
-            const headerMenu__itemSpan = document.createElement('span');
-            headerMenu__itemSpan.setAttribute('class', 'link header-menu__item header__burger-sub-menu');
-            headerMenu__itemSpan.appendChild(headerMenu__item);
-            header__burgerMenu.appendChild(headerMenu__itemSpan);
+        {   const headerMenuItem = document.createElement('a');
+            headerMenuItem.setAttribute('class', 'link header-menu__item');
+            headerMenuItem.setAttribute('href', '#');
+            headerMenuItem.textContent = menuArray[i];
+            const headerMenuItemSpan = document.createElement('span');
+            headerMenuItemSpan.setAttribute('class', 'link header-menu__item header__burger-sub-menu');
+            headerMenuItemSpan.appendChild(headerMenuItem);
+            headerBurgerMenu.appendChild(headerMenuItemSpan);
 
-            const headerMenu__subMenu = document.createElement('div');
-            headerMenu__subMenu.setAttribute('class', 'header-menu__sub-menu')
-            headerMenu__item.appendChild(headerMenu__subMenu);
+            const headerMenuSubMenu = document.createElement('div');
+            headerMenuSubMenu.setAttribute('class', 'header-menu__sub-menu')
+            headerMenuItem.appendChild(headerMenuSubMenu);
             for(let i = 0; i < 3; i++)
             {
-                const headerSubMenu__item = document.createElement('a');
-                headerSubMenu__item.setAttribute('class', 'link header-menu__sub-menu-item');
-                headerSubMenu__item.setAttribute('href', '#');
-                headerSubMenu__item.textContent = subMenuArray[i];
-                headerMenu__subMenu.appendChild(headerSubMenu__item);
+                const headerSubMenuItem = document.createElement('a');
+                headerSubMenuItem.setAttribute('class', 'link header-menu__sub-menu-item');
+                headerSubMenuItem.setAttribute('href', '#');
+                headerSubMenuItem.textContent = subMenuArray[i];
+                headerMenuSubMenu.appendChild(headerSubMenuItem);
             }
             continue;
         }
-        const headerMenu__item = document.createElement('a');
-        headerMenu__item.setAttribute('class', 'link header-menu__item');
-        headerMenu__item.setAttribute('href', '#');
-        headerMenu__item.textContent = menuArray[i];
-        header__burgerMenu.appendChild(headerMenu__item);
+        const headerMenuItem = document.createElement('a');
+        headerMenuItem.setAttribute('class', 'link header-menu__item');
+        headerMenuItem.setAttribute('href', '#');
+        headerMenuItem.textContent = menuArray[i];
+        headerBurgerMenu.appendChild(headerMenuItem);
     }
 
-    const header__burgerBottom = document.createElement('div');
-    header__burgerBottom.setAttribute('class', 'header__burger-bottom');
-    header__burgerWrapper.appendChild(header__burgerBottom); 
+    const headerBurgerBottom = document.createElement('div');
+    headerBurgerBottom.setAttribute('class', 'header__burger-bottom');
+    headerBurgerWrapper.appendChild(headerBurgerBottom); 
 
-    const header__slowVision = document.createElement('a');
-    header__slowVision.setAttribute('class', 'header__slow-vision header__slow-vision_adaptive');
-    header__slowVision.setAttribute('href', '#');
-    header__burgerBottom.appendChild(header__slowVision);
+    const headerSlowVision = document.createElement('a');
+    headerSlowVision.setAttribute('class', 'header__slow-vision header__slow-vision_adaptive');
+    headerSlowVision.setAttribute('href', '#');
+    headerBurgerBottom.appendChild(headerSlowVision);
 
-    const header__languages = document.createElement('div');
-    header__languages.setAttribute('class', 'header__languages');
-    header__burgerBottom.appendChild(header__languages);
+    const headerLanguages = document.createElement('div');
+    headerLanguages.setAttribute('class', 'headerLanguages');
+    headerBurgerBottom.appendChild(headerLanguages);
 
-    const header__languageItem1 = document.createElement('a');
-    header__languageItem1.setAttribute('class', 'link header__language-item');
-    header__languageItem1.textContent = 'RU';
-    header__languages.appendChild(header__languageItem1);
+    const headerLanguageItem1 = document.createElement('a');
+    headerLanguageItem1.setAttribute('class', 'link header__language-item');
+    headerLanguageItem1.textContent = 'RU';
+    headerLanguages.appendChild(headerLanguageItem1);
 
-    const header__languageItem2 = document.createElement('a');
-    header__languageItem2.setAttribute('class', 'link header__language-item');
-    header__languageItem2.textContent = 'EN';
-    header__languages.appendChild(header__languageItem2);
+    const headerLanguageItem2 = document.createElement('a');
+    headerLanguageItem2.setAttribute('class', 'link header__language-item');
+    headerLanguageItem2.textContent = 'EN';
+    headerLanguages.appendChild(headerLanguageItem2);
 
-    const contacts__phone = document.createElement('p');
-    contacts__phone.setAttribute('class', 'contacts__phone');
-    contacts__phone.textContent = '+7 (3467) 555-321'
-    header__burgerBottom.appendChild(contacts__phone);
-    const contacts__address = document.createElement('p');
-    contacts__address.setAttribute('class', 'contacts__address contacts__address_burger');
-    contacts__address.textContent = 'г. Ханты-Мансийск ул. Лопарева,6'
-    header__burgerBottom.appendChild(contacts__address);
+    const contactsPhone = document.createElement('p');
+    contactsPhone.setAttribute('class', 'contacts__phone');
+    contactsPhone.textContent = '+7 (3467) 555-321'
+    headerBurgerBottom.appendChild(contactsPhone);
+    const contactsAddress = document.createElement('p');
+    contactsAddress.setAttribute('class', 'contacts__address contacts__address_burger');
+    contactsAddress.textContent = 'г. Ханты-Мансийск ул. Лопарева,6'
+    headerBurgerBottom.appendChild(contactsAddress);
 
     
     
