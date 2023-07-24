@@ -195,11 +195,11 @@ window.onload = function (){
     let menuArray = ['Прямая трансляция','Ханты-Мансийск','Новости','Участники','Основная информация','Результаты','Медиа','Контакты']
     let subMenuArray = ['О Ханты-Мансийске','История кубка мира','Информация для участников' ]
 
-
+    
     for(let i = 0; i < 8; i++){
         if(i === 4)
         {   const headerMenuItem = document.createElement('a');
-            headerMenuItem.setAttribute('class', 'link header-menu__item');
+            headerMenuItem.setAttribute('class', 'link header-menu__item sub-menu-toggler');
             headerMenuItem.setAttribute('href', '#');
             headerMenuItem.textContent = menuArray[i];
             const headerMenuItemSpan = document.createElement('span');
@@ -209,7 +209,10 @@ window.onload = function (){
 
             const headerMenuSubMenu = document.createElement('div');
             headerMenuSubMenu.setAttribute('class', 'header-menu__sub-menu')
-            headerMenuItem.appendChild(headerMenuSubMenu);
+            headerMenuItemSpan.appendChild(headerMenuSubMenu);
+            headerMenuItem.addEventListener('click', () => {
+                headerMenuSubMenu.classList.toggle('active')
+            });
             for(let i = 0; i < 3; i++)
             {
                 const headerSubMenuItem = document.createElement('a');
