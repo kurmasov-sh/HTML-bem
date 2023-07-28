@@ -1,0 +1,24 @@
+{
+  "name": "html-bem",
+  "version": "1.0.0",
+  "description": "ugraweb frontend learning project",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "index": "node index.js"
+  },
+  "repository": "git+https://github.com/kurmasov-sh/HTML-bem.git",
+  "author": "kurmasov-sh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kurmasov-sh/HTML-bem/issues"
+  },
+  "homepage": "https://github.com/kurmasov-sh/HTML-bem#readme",
+  "dependencies": {
+    "jquery": "3.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

@@ -429,7 +429,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
 }
 
 .footer_mobile-version{
@@ -556,6 +555,8 @@
 }
 
 .header__burger-wrapper{
+    height: 100%;
+    display: none;
     background-color: #FFFFFF;
     width: 100%;
     right: -100%;
@@ -665,6 +666,9 @@
         display: none;
     }
     .header__burger{
+        display: block;
+    }
+    .header__burger-wrapper{
         display: block;
     }
     .header__slow-vision_adaptive{
