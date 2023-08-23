@@ -49,7 +49,7 @@ function browserReload(done) {
 
 // Минификатор JS
 function JSMin(done) {
-  gulp.src('./index.js')
+  gulp.src('index.js')
       .pipe(uglify())
       .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest('dist/js/'));
