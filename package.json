@@ -20,6 +20,9 @@
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",
+    "css2sass": "^0.1.1",
+    "eslint": "^8.47.0",
+    "eslint-config-google": "^0.14.0",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
